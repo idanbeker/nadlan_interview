@@ -21,7 +21,7 @@ class MenuPage extends Component {
 
     render() {
 
-        const CityMenuItem = ({cityName, handleClick,img="http://singularcity.com/wp-content/uploads/2012/03/sunset-with-Old-Jaffa-in-the-background-web.jpg"}) =>
+        const CityMenuItem = ({cityName, handleClick,img}) =>
             <div className="CityMenuItem" onClick={handleClick}>
                 <div className="Title">{cityName}</div>
                 <div className="ImageContainer" style={{backgroundImage:`url(${img})`}}/>
@@ -31,8 +31,8 @@ class MenuPage extends Component {
 
         return (
             <div id="CitiesMenuPage">
-                {SupportedCities.map(({cityName, id}, idx) =>
-                    <CityMenuItem key={idx} cityName={cityName} handleClick={()=>{this.redirectToWeatherPage(id)}}/>
+                {SupportedCities.map(({cityName, id,img}, idx) =>
+                    <CityMenuItem key={idx} cityName={cityName} img={img} handleClick={()=>{this.redirectToWeatherPage(id)}}/>
                 )}
 
             </div>
