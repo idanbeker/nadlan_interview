@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {SupportedCities} from "../../../constants/SupportedCities";
+import {GridList} from "material-ui";
 
 
 class MenuPage extends Component {
@@ -20,17 +21,20 @@ class MenuPage extends Component {
 
     render() {
 
-        const CityMenuItem = ({cityName, handleClick}) =>
+        const CityMenuItem = ({cityName, handleClick,img="http://singularcity.com/wp-content/uploads/2012/03/sunset-with-Old-Jaffa-in-the-background-web.jpg"}) =>
             <div className="CityMenuItem" onClick={handleClick}>
-                {cityName}
+                <div className="Title">{cityName}</div>
+                <div className="ImageContainer" style={{backgroundImage:`url(${img})`}}/>
+
             </div>;
 
 
         return (
-            <div className="MenuPage">
+            <div id="CitiesMenuPage">
                 {SupportedCities.map(({cityName, id}, idx) =>
                     <CityMenuItem key={idx} cityName={cityName} handleClick={()=>{this.redirectToWeatherPage(id)}}/>
                 )}
+
             </div>
         );
     }

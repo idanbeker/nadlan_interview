@@ -1,0 +1,46 @@
+#CitiesMenuPage{
+    width:100%;
+    position:relative;
+}
+
+#CitiesMenuPage .CityMenuItem{
+    width:20%;
+    padding:5px;
+    display:inline-block;
+    cursor: pointer;
+    position:relative;
+    height:20vw;
+
+}
+
+#CitiesMenuPage .CityMenuItem > .ImageContainer{
+    animation:.3s filter;
+    width:100%;
+    height:100%;
+    background-size:cover;
+
+}
+
+#CitiesMenuPage .CityMenuItem > .Title{
+    opacity:0;
+    animation:.3s opacity;
+    position:absolute;
+    top:20px;
+    width:calc(100% - 5px);
+    height:30px;
+    line-height:30px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight:bold;
+    color:white;
+    background:rgba(0,0,100,.7);
+    z-index: 2;
+}
+
+#CitiesMenuPage .CityMenuItem:hover > .ImageContainer{
+    filter:grayscale(60%);
+}
+
+#CitiesMenuPage .CityMenuItem:hover > .Title{
+    opacity:1;
+}
