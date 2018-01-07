@@ -1,0 +1,48 @@
+#WeatherDisplay{
+
+}
+
+#WeatherDisplay .WeatherDataContainer{
+    position:relative;
+    font-family: Montserrat;
+    width:300px;
+    margin-top:30px;
+    border:2px solid #6689ff;
+    padding-bottom:5px;
+
+
+}
+
+#WeatherDisplay .WeatherDataContainer > .Title{
+    background:#6689ff;
+    color:white;
+    height:40px;
+    line-height: 40px;
+    font-weight: 500;
+    margin-bottom:12px;
+    text-align: center;
+}
+
+
+#WeatherDisplay .WeatherDataContainer > .Icon{
+    width:60px;
+    margin:auto;
+    border:6px solid #6689ff;
+    position:relative;
+    margin-left:8px;
+    border-radius: 100%;
+    height:60px;
+}
+
+#WeatherDisplay .WeatherDataContainer > .Degrees{
+    width:100%;
+    text-align: center;
+    font-size:26px;
+    font-weight:bold;
+    text-decoration: black;
+    color:lightgrey;
+}
+
+#WeatherDisplay .WeatherDataContainer > .Description{
+    padding-left:7px;
+}
