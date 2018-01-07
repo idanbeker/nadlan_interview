@@ -9,16 +9,18 @@ import {AppBar, Toolbar,Typography} from "material-ui";
 class App extends Component {
 
   render() {
+      const TopMenu = ()=><AppBar position="static" color="default">
+          <Toolbar >
+              <Typography id="TopMenuTitle" type="title" color="inherit"  onClick={()=>{window.location.href='/'}}>
+                  Welcome to Ballaba weather app.
+              </Typography>
+          </Toolbar>
+      </AppBar>
+
 
     return (
       <div id="AppContainer">
-          <AppBar position="static" color="default">
-              <Toolbar>
-                  <Typography type="title" color="inherit">
-                      Welcome to Ballaba weather app.
-                  </Typography>
-              </Toolbar>
-          </AppBar>
+          <TopMenu/>
           <HashRouter>
               <Switch>
                   <Route path="/" exact component={MenuPage}/>
