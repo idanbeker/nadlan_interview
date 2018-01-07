@@ -4,7 +4,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom'
 
 import './App.css';
 import MenuPage from "./routes/LocationsMenuPage/components/MenuPage.react";
-import CityWeatherScreen from "./routes/CityWeatherScreen/components/CityWeatherScreen";
+import CityWeatherScreen from "./routes/CityWeatherScreen/components/CityWeatherScreen.react";
 
 class App extends Component {
 
